@@ -75,7 +75,7 @@ input:-webkit-autofill{
     justify-content: space-between;
     position: fixed;
     background-color: #232121;
-    z-index: 20;
+    z-index: 2;
 }
 
 .izquierda-head{
@@ -586,7 +586,7 @@ a:hover{
     opacity: 0;
     background-color:#121010;
     position: fixed;
-        z-index: 1;
+        z-index: 3;
         width: 100%;
         height: 100vh;
     transition: all .8s ease;
