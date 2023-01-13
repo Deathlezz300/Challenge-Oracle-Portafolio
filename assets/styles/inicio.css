@@ -606,6 +606,8 @@ a:hover{
 .titulo-formacion{
     color: white;
     text-align: center;
+    border: 1px solid white;
+    width: 100%;
 }
 
 .imagen-formacion{
