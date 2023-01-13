@@ -462,6 +462,11 @@ a:hover{
     padding-top: 1%;
 }
 
+.texto-formacion{
+    width: 100%;
+    text-align: center;
+}
+
 .texto-form{
     position: absolute;
     color: white;
