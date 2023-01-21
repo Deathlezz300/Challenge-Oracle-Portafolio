@@ -103,11 +103,19 @@ input:-webkit-autofill{
 .me{
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 5.5rem;
     padding-bottom: 4rem;
     scroll-behavior: smooth;
+}
+
+.arriba-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .izquierda-me{
@@ -128,7 +136,6 @@ input:-webkit-autofill{
     font-size: 2.6rem;
     color: white;
 }
-
 
 
 .image-me{
@@ -219,7 +226,7 @@ a:hover{
     width: 90%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    align-items: center;
+    place-items: center;
     grid-column-gap: 1rem;
     grid-template-rows: auto;
     grid-row-gap: 1rem;
@@ -352,10 +359,11 @@ a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .caja-info-proyecto{
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -367,6 +375,8 @@ a:hover{
     border-radius: 10px;
     border: none;
     color: white;
+    transition: all .4s ease-in-out;
+    transform: translateY(-100%);
 }
 
 .caja-imagen-proyec:hover > img{
@@ -374,7 +384,7 @@ a:hover{
 }
 
 .caja-imagen-proyec:hover > div{
-    display: flex;
+    transform: translateY(0);
 }
 
 
@@ -470,14 +480,14 @@ a:hover{
 .box-cv{
     width: 100%;
     display: flex;
-    padding-top: 1.5rem;
+    justify-content: center;
 }
 
 .boton-cv{
     text-decoration: none;
     background-color: #2F9916;
-    width: 98%;
-    height: 94%;
+    width: 160px;
+    height: 40px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -486,11 +496,10 @@ a:hover{
 }
 
 .box-after-cv{
-    width: 160px;
-    height: 40px;
+    width: 78%;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     overflow: hidden;
     border-radius: 10px;
@@ -510,10 +519,10 @@ a:hover{
     transform: scale(0);
 }
 
-.box-after-cv:hover::before{
+/* .box-after-cv:hover::before{
     animation: rotar 1.8s linear infinite;
-    transform: scale(1);
-}
+    transform: scale(0);
+} */
 
 .texto-form{
     position: absolute;
@@ -811,16 +820,9 @@ a:hover{
     }
 
 
-    .imagen-proyecto{
-        width: 67%;
-    }
-
     .texto-about{
         font-size: 1.1rem;
-    }
-
-
-    
+    }    
 
 }
 
@@ -899,13 +901,21 @@ a:hover{
         width: 50%;
     }
 
-    .box-cv{
-        justify-content: center;
-    }
 
     .me{
         padding-bottom: 1.7rem;
     }
+
+    .box-image-me{
+        width: 30%;
+    }
+
+    .box-after-cv{
+        width: 95%;
+        padding-top: 1.5rem;
+    }
+
+
 
 }
 
@@ -949,10 +959,15 @@ a:hover{
 
 @media screen and (max-width:560px){
 
-    .me{
+    .arriba-content{
         width: 100%;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+    }
+
+    .box-after-cv{
+        width: 100%;
         justify-content: center;
     }
 
