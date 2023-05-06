@@ -344,7 +344,7 @@ a:hover{
 .imagen-proyecto{
     width: 92%;
     border-radius: 10px;
-    height: 210px;
+    min-height: 210px;
 }
 
 .imagen-formacion2{
@@ -376,7 +376,7 @@ a:hover{
     border: none;
     color: white;
     transition: all .4s ease-in-out;
-    transform: translateY(-100%);
+    transform: translateY(-120%);
 }
 
 .caja-imagen-proyec:hover > img{
@@ -414,9 +414,8 @@ a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: transparent;
     padding-bottom: 5rem;
-    padding-top: 1.5rem;
+    padding-top: 3.5rem;
     background-color: rgba(0, 0, 0, 0.3 );
 }
 
@@ -451,26 +450,21 @@ a:hover{
 
 .login-box{
     width: 50%;
-    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
 }
 
 .titulo-contactame{
     color: white;
-    margin-bottom: 1rem;
+    width: 90%;
+    text-align: center;
+    margin-bottom: 1.2rem;
 }
 
-.input-form{
-    height: 100%;
-    background: rgba(0,0, 0, 0.4);
-    color: white;
-    font-size: 1rem;
-    border: none;
-    outline: none;
-    width: 100%;
-    border-radius: 10px;
-    padding-left: 2%;
-    padding-top: 1%;
-}
+
 
 .texto-formacion{
     width: 100%;
@@ -523,81 +517,112 @@ a:hover{
     animation: rotar 1.8s linear infinite;
     transform: scale(0);
 } */
-
-.texto-form{
-    position: absolute;
+.input-form{
+    width: 100%;
+    height: 3rem;
+    outline: none;
+    background: rgb(8, 8, 8);
+    border: none;
+    margin-bottom: .9rem;
+    border-radius: 10px;
+    padding-left: 1rem;
+    font-size: 1rem;
     color: white;
-    margin-top: 1%;
-    margin-left: 1%;
-    z-index: -1;
-    transition: .1s;
+    transition: .2s ease-in-out;
 }
 
-.input-form:focus ~ label{
-    margin-top: -.1%;
-    font-size: .8rem;
-    color: #05ff00;
-}
-
-.user-box{
-    display: flex;
-    flex-direction: column;
-    height: 12%;
-    margin-bottom: 1rem;
-}
 
 .area-form{
-    height: 80%;
-    background: rgba(0,0, 0, 0.4);
+    width: 100%;
+    color: white;
+    height: 200px;
     outline: none;
     resize: none;
-    border-radius: 10px;
+    background: rgb(8, 8, 8);
     border: none;
-    padding-top: 1.6rem;
-    color: white;
+    margin-bottom: .9rem;
+    border-radius: 10px;
+    padding-left: .6rem;
+    padding-top: .6rem;
+    padding-right: .6rem;
     font-size: 1rem;
-    padding-left: 1%;
+    text-align: justify;
+    transition: .2s ease-in-out;
 }
 
-.texto-form2{
-    transition: .1s;
+.input-group{
+    width: 90%;
+    position: relative;
+}
+
+.label-input{
+    width: fit-content;
+    padding-left: .2rem;
+    padding-right: .2rem;
+    text-align: left;
     position: absolute;
-    color: white;
-    margin-top: 3%;
-    margin-left: 1%;
+    top: 13px;
+    left: 8px;
+    pointer-events: none;
+    color: grey;
+    transition: .2s ease-in-out;
+    font-weight: 800;
+    border-radius: 100%;
+}
+
+.label-area{
+    width: fit-content;
+    padding-left: .2rem;
+    padding-right: .2rem;
+    text-align: left;
+    position: absolute;
+    top: 13px;
+    left: 8px;
+    pointer-events: none;
+    color: grey;
+    transition: .2s ease-in-out;
+    font-weight: 800;
+    border-radius: 100%;
+}
+
+.input-form:focus + .label-input,
+.input-form:not(:placeholder-shown) +
+.label-input{
+    top: -10px;
+    background: linear-gradient(180deg, rgba(35,33,33,1) 39%, rgba(8,8,8,1) 60%);
+    color: #05ff00;
+}
+
+.input-form:focus{
+    border: 2px solid #05ff00;
     z-index: -1;
 }
 
-.area-form:focus ~ label{
-    margin-top: .5%;
+.area-form:focus + .label-area,
+.area-form:not(:placeholder-shown) +
+.label-area{
+    top: -10px;
+    background: linear-gradient(180deg, rgba(35,33,33,1) 39%, rgba(8,8,8,1) 60%);
     color: #05ff00;
-    font-size: .8rem;
 }
 
 .area-form:focus{
-    padding-top: 1.6rem;
-}
-
-.user-box2{
-    display: flex;
-    flex-direction: column;
-    height: 35%;
+    border: 2px solid #05ff00;
 }
 
 .boton-box3{
-    display: block;
-    width: 100%;
-    height: 12%;
-
+    display: flex;
+    width: 91%;
+    height: auto;
 }
 
 .boton-enviar6{
     background-color: #2F9916;
-    width: 25%;
-    height: 100%;
+    width: 29%;
+    height: 45px;
     color: white;
     border-radius: 8px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 700;
     margin-left: 1%;
     border: none;
@@ -887,13 +912,8 @@ a:hover{
         width: 90%;
     }
 
-    .contacto{
-        flex-direction: column;
-    }
-
     .login-box{
-        order: 1;
-        padding-top: 1rem;
+        width: 95%;
     }
 
     .box-image-me2{
